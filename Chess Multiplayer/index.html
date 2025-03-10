@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess - Online Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="room-controls">
+            <input type="text" id="roomCode" placeholder="Enter Room Code">
+            <button onclick="joinRoom()">Join Room</button>
+            <button onclick="createRoom()">Create New Room</button>
+        </div>
+        <div id="board" class="chessboard"></div>
+        <div class="game-info">
+            <div id="status">Create or join a room to start playing</div>
+            <div id="turnInfo"></div>
+            <button onclick="resignGame()" id="resignBtn" disabled>Resign</button>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
